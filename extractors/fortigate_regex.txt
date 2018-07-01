@@ -1,0 +1,1156 @@
+{
+  "extractors": [
+    {
+      "title": "Fortinet Time",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "time",
+      "extractor_config": {
+        "regex_value": "time=([0-9:]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet LogID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 4,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "logid",
+      "extractor_config": {
+        "regex_value": "logid=([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 5,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "type",
+      "extractor_config": {
+        "regex_value": "type=\"?([\\/a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet DeviceID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 3,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "devid",
+      "extractor_config": {
+        "regex_value": "devid=\"?([0-9a-zA-Z]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Traffic Direction",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 12,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "direction",
+      "extractor_config": {
+        "regex_value": "direction=\"?([\\/a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Virtual Domain",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 9,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "vd",
+      "extractor_config": {
+        "regex_value": "vd=\"?([a-zA-Z0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Method",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 13,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "method",
+      "extractor_config": {
+        "regex_value": "method=\"?([a-zA-Z0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet AppList",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 14,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "applist",
+      "extractor_config": {
+        "regex_value": "applist=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Subtype",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 6,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "subtype",
+      "extractor_config": {
+        "regex_value": "subtype=\"?([a-zA-Z0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet EventType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 7,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "eventtype",
+      "extractor_config": {
+        "regex_value": "eventtype=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet RequestType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 15,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "reqtype",
+      "extractor_config": {
+        "regex_value": "reqtype=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet PolicyUUID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 16,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "poluuid",
+      "extractor_config": {
+        "regex_value": "poluuid=\"?([a-zA-Z0-9-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet ServiceName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 17,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "service",
+      "extractor_config": {
+        "regex_value": "service=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet SessionID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 10,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "sessionid",
+      "extractor_config": {
+        "regex_value": "sessionid=\"?([0-9-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Action",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 18,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "action",
+      "extractor_config": {
+        "regex_value": "action=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet User",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 11,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "user",
+      "extractor_config": {
+        "regex_value": "user=\"?([\\/\\\\a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet PolicyGroup",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 19,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "group",
+      "extractor_config": {
+        "regex_value": "group=\"?([\\/\\\\a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet PolicyID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 20,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "policyid",
+      "extractor_config": {
+        "regex_value": "policyid=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination Country",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 21,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstcountry",
+      "extractor_config": {
+        "regex_value": "dstcountry=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination Interface",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 22,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstintf",
+      "extractor_config": {
+        "regex_value": "dstintf=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Proto",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 23,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "proto",
+      "extractor_config": {
+        "regex_value": "proto=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination Hostname",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 24,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "hostname",
+      "extractor_config": {
+        "regex_value": "hostname=\"?([.a-zA-Z0-9_-]+{2,4})"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Firewall Message",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 25,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "msg",
+      "extractor_config": {
+        "regex_value": "msg=\"?([\\/\\\\.\\?=&a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Profile",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 28,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "profile",
+      "extractor_config": {
+        "regex_value": "profile=\"?([\\/a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Source Country",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 29,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srccountry",
+      "extractor_config": {
+        "regex_value": "srccountry=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Log Description",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 30,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "logdesc",
+      "extractor_config": {
+        "regex_value": "logdesc=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet AuthProto",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 31,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "authproto",
+      "extractor_config": {
+        "regex_value": "authproto=\"?([\\/\\(\\)\\.a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Origin Interface",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 32,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcintf",
+      "extractor_config": {
+        "regex_value": "srcintf=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Origin Source IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 33,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcip",
+      "extractor_config": {
+        "regex_value": "srcip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Origin Source Port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 34,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcport",
+      "extractor_config": {
+        "regex_value": "srcport=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 35,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstip",
+      "extractor_config": {
+        "regex_value": "dstip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination Port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 36,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstport",
+      "extractor_config": {
+        "regex_value": "dstport=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Local Device Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 2,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "devname",
+      "extractor_config": {
+        "regex_value": "devname=\"?([0-9a-zA-Z_]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Packets Received",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 37,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "rcvdpkt",
+      "extractor_config": {
+        "regex_value": "rcvdpkt=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Packets Sent",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 38,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "sentpkt",
+      "extractor_config": {
+        "regex_value": "sentpkt=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet CPU",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 39,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "cpu",
+      "extractor_config": {
+        "regex_value": "cpu=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet MEM",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 40,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "mem",
+      "extractor_config": {
+        "regex_value": "mem=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Disk",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 41,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "disk",
+      "extractor_config": {
+        "regex_value": "disk=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Total Session",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 42,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "totalsession",
+      "extractor_config": {
+        "regex_value": "totalsession=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Disk Log Rate",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 43,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "disklograte",
+      "extractor_config": {
+        "regex_value": "disklograte=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet FAZ Log Rate",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 44,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fazlograte",
+      "extractor_config": {
+        "regex_value": "fazlograte=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Setup Rate",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 45,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "setuprate",
+      "extractor_config": {
+        "regex_value": "setuprate=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet AppCat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 47,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "appcat",
+      "extractor_config": {
+        "regex_value": "appcat=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet AppRisk",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 49,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "apprisk",
+      "extractor_config": {
+        "regex_value": "apprisk=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet App Action",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 50,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "appact",
+      "extractor_config": {
+        "regex_value": "appact=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet TransIP",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 52,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "transip",
+      "extractor_config": {
+        "regex_value": "transip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Duration",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 51,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "duration",
+      "extractor_config": {
+        "regex_value": "duration=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet AppID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 48,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "appid",
+      "extractor_config": {
+        "regex_value": "appid=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet TransPort",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 53,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "transport",
+      "extractor_config": {
+        "regex_value": "transport=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet TransDISP",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 54,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "trandisp",
+      "extractor_config": {
+        "regex_value": "trandisp=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Bandwidth Sent",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 55,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "bandwidth",
+      "extractor_config": {
+        "regex_value": "bandwidthsnt=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Bandwidth Received",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 56,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "bandwidthrcvd",
+      "extractor_config": {
+        "regex_value": "bandwidth=\"?[0-9]+/([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet UTM Action",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 58,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "utmaction",
+      "extractor_config": {
+        "regex_value": "utmaction=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet CountApp",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 57,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "countapp",
+      "extractor_config": {
+        "regex_value": "countapp=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet CR_Score",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 60,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "crscore",
+      "extractor_config": {
+        "regex_value": "crscore=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet CR_Action",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 61,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "craction",
+      "extractor_config": {
+        "regex_value": "craction=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet UTM Event",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 59,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "utmevent",
+      "extractor_config": {
+        "regex_value": "utmevent=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Category Description",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 62,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "catdesc",
+      "extractor_config": {
+        "regex_value": "catdesc=\"?([a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Category ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 63,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "cat",
+      "extractor_config": {
+        "regex_value": "cat=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Attack",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 64,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "attack",
+      "extractor_config": {
+        "regex_value": "attack=\"?([\\/\\\\.\\?=&a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Attack_ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 65,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "attackid",
+      "extractor_config": {
+        "regex_value": "attackid=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Attack_REF",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 66,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ref",
+      "extractor_config": {
+        "regex_value": "ref=\"?([\\/\\\\.\\:\\?=&a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Incident Serial Number",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 67,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "incidentserialno",
+      "extractor_config": {
+        "regex_value": "incidentserialno=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet DLP FilterType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 69,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "filtertype",
+      "extractor_config": {
+        "regex_value": "filtertype=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet DLP FilterCat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 70,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "filtercat",
+      "extractor_config": {
+        "regex_value": "filtercat=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet DLP FilterIDX",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 71,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "filteridx",
+      "extractor_config": {
+        "regex_value": "filteridx=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Status",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 1,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "status",
+      "extractor_config": {
+        "regex_value": "status=\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet URL FilterList",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "urlfilterlist",
+      "extractor_config": {
+        "regex_value": "urlfilterlist=\"?([a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet URL FilterIDX",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "urlfilteridx",
+      "extractor_config": {
+        "regex_value": "urlfilteridx=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Destination URL",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 68,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "url",
+      "extractor_config": {
+        "regex_value": "url=\"?([\\/\\\\.\\?\\%\\:=&a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet App",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 46,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "app",
+      "extractor_config": {
+        "regex_value": " app=\"?([\\.a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Bytes Sent",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 26,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "sentbyteint",
+      "extractor_config": {
+        "regex_value": "sentbyte=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Bytes Received",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 27,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "rcvdbyteint",
+      "extractor_config": {
+        "regex_value": "rcvdbyte=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Level",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "levelstr",
+      "extractor_config": {
+        "regex_value": "level=\\\"?([a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.4.5"
+}
