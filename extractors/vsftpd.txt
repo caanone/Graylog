@@ -1,0 +1,66 @@
+{
+  "extractors": [
+    {
+      "title": "FTPusername",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "\\]\\:\\s\\[%{USERNAME:ftp_username}\\]"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "FTPaction",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "\\]: \\[%{DATA:ftpd_user}\\] %{WORD:ftpd_action_status} %{WORD:ftpd_action}: Client \\\"%{IPV4:ftpd_client_ip}\\\"(, \\\"%{GREEDYDATA:ftpd_file}\\\", %{DATA:ftpd_file_size}, %{DATA:ftpd_file_transfer_speed}|, \\\"%{GREEDYDATA:ftpd_file}\\\", %{DATA:ftpd_file_transfer_speed}|)$"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "FTPconnect",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{WORD:ftpd_action}: Client \\\"%{IPV4:ftpd_client_ip}\\\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "FTPfilesize",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ftpd_int_filesize",
+      "extractor_config": {
+        "regex_value": "\\,\\s([0-9]*)\\s(bytes)\\,\\s"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.4.5"
+}
