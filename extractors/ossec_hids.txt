@@ -1,0 +1,108 @@
+{
+  "extractors": [
+    {
+      "title": "OSSECcrit",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_crit",
+      "extractor_config": {
+        "regex_value": "crit=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSECid",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_id",
+      "extractor_config": {
+        "regex_value": "id=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSECdescription",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_description",
+      "extractor_config": {
+        "regex_value": "description=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSECclassification",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_classification",
+      "extractor_config": {
+        "regex_value": "classification=\"?([\\/\\,a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSEmessage",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_message",
+      "extractor_config": {
+        "regex_value": "message=\\\"(.*?)[^\\\\]\\\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSECcomponent",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_component",
+      "extractor_config": {
+        "regex_value": "component=\\\"(.*?)\\\"\\,"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "OSSEChost",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ids_host",
+      "extractor_config": {
+        "regex_value": "component=\"\\((.*?)\\)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.4.5"
+}
