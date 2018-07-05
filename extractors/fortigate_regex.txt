@@ -1150,6 +1150,146 @@
       },
       "condition_type": "none",
       "condition_value": ""
+    },
+    {
+      "title": "Fortigate Locport",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "locport",
+      "extractor_config": {
+        "regex_value": "locport=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate Outintf",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "outintf",
+      "extractor_config": {
+        "regex_value": "outintf=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate remip",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "remip",
+      "extractor_config": {
+        "regex_value": "remip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate locip",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "locip",
+      "extractor_config": {
+        "regex_value": "locip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate remport",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "remport",
+      "extractor_config": {
+        "regex_value": "remport=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate cookies",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "cookies",
+      "extractor_config": {
+        "regex_value": "cookies=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate vpntunnel",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "vpntunnel",
+      "extractor_config": {
+        "regex_value": "vpntunnel=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate tunneltype",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "tunneltype",
+      "extractor_config": {
+        "regex_value": "tunneltype=\"?([\\/a-zA-Z0-9 _-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate nextstat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "nextstat",
+      "extractor_config": {
+        "regex_value": "nextstat=\"?([0-9]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate assignip",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "assignip",
+      "extractor_config": {
+        "regex_value": "assignip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
     }
   ],
   "version": "2.4.5"
