@@ -225,20 +225,6 @@
       "condition_value": ""
     },
     {
-      "title": "Fortinet PolicyGroup",
-      "extractor_type": "regex",
-      "converters": [],
-      "order": 19,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "group",
-      "extractor_config": {
-        "regex_value": "group=\"?([\\/\\\\a-zA-Z0-9_-]+)"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-    {
       "title": "Fortinet PolicyID",
       "extractor_type": "regex",
       "converters": [],
@@ -1287,6 +1273,34 @@
       "target_field": "assignip",
       "extractor_config": {
         "regex_value": "assignip=\"?([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet PolicyGroup",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 19,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "group",
+      "extractor_config": {
+        "regex_value": "group=\"?([\\/\\.\\\\a-zA-Z0-9_-]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortigate reason",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "reason",
+      "extractor_config": {
+        "regex_value": "reason=\"?([\\/a-zA-Z0-9 _-]+)"
       },
       "condition_type": "none",
       "condition_value": ""
